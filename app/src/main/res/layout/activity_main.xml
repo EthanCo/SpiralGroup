@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ethanco.spiralgroupsample.MainActivity">
+
+        <com.ethanco.spiralgroup.SpiralGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ethanco.spiralgroup.SpiralRelativeLayout
+                android:id="@+id/spiral_item_1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                app:spiralChecked="true"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+
+            <com.ethanco.spiralgroup.SpiralRelativeLayout
+                android:id="@+id/spiral_item_2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                app:spiralChecked="false"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+
+            <com.ethanco.spiralgroup.SpiralRelativeLayout
+                android:id="@+id/spiral_item_3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                app:spiralChecked="false"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+
+        </com.ethanco.spiralgroup.SpiralGroup>
+    </RelativeLayout>
+</layout>
+
