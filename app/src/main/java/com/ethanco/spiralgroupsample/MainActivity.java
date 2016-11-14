@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.ethanco.spiralgroup.ISpiralItem;
-import com.ethanco.spiralgroup.OnCheckedChangeListener;
+import com.ethanco.spiralgroup.abs.ISpiralItem;
+import com.ethanco.spiralgroup.abs.OnCheckedChangeListener;
 import com.ethanco.spiralgroupsample.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements OnCheckedChangeListener {

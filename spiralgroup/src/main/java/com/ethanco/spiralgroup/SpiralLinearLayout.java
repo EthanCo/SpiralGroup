@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 
 import com.ethanco.spiralgroup.abs.ISpiralItem;
 import com.ethanco.spiralgroup.abs.OnCheckedChangeListener;
@@ -13,16 +13,16 @@ import com.ethanco.spiralgroup.abs.OnCheckedChangeListener;
  * Created by EthanCo on 2016/11/11.
  */
 
-public class SpiralRelativeLayout extends RelativeLayout implements ISpiralItem, View.OnClickListener {
+public class SpiralLinearLayout extends LinearLayout implements ISpiralItem, View.OnClickListener {
     private SpiralExecutor executor = new SpiralExecutor();
     private boolean isCheckTemp;
 
-    public SpiralRelativeLayout(Context context, AttributeSet attrs) {
+    public SpiralLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public SpiralRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SpiralLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }

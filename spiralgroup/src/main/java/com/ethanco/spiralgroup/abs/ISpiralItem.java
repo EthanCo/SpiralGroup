@@ -1,4 +1,4 @@
-package com.ethanco.spiralgroup;
+package com.ethanco.spiralgroup.abs;
 
 import android.widget.Checkable;
 
@@ -8,5 +8,5 @@ import android.widget.Checkable;
  */
 
 public interface ISpiralItem extends Checkable{
-
+    void addOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener);
 }
