@@ -1,15 +1,10 @@
 # SpiralGroup #
 一个类似于RadioGroup的ViewGroup，支持所有View的互斥  
 
-![](/SpiralGroup.gif)  
+  
 
-![](http://p1.bpimg.com/567571/86bd38603040ee69.gif)  
+![](/SpiralGroup.gif) |  ![](http://p1.bpimg.com/567571/86bd38603040ee69.gif)   
 
-dog | bird | cat
-----|------|----
-foo | foo  | foo
-bar | bar  | bar
-baz | baz  | baz
 
 ## 添加依赖 ##
 ### Step 1. Add the JitPack repository to your build file ###
