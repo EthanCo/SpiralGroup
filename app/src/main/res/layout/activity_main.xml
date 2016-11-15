@@ -10,6 +10,7 @@
         tools:context="com.ethanco.spiralgroupsample.MainActivity">
 
         <com.ethanco.spiralgroup.SpiralGroup
+            android:id="@+id/layout_spiral_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -19,24 +20,90 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                app:spiralChecked="true"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+                android:background="@drawable/selector_1"
+                app:spiralChecked="true">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/ic_test_20"
+                    android:tag="@string/tag_imageview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:tag="@string/tag_textview"
+                    android:text="Item1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+            </com.ethanco.spiralgroup.SpiralRelativeLayout>
 
             <com.ethanco.spiralgroup.SpiralRelativeLayout
                 android:id="@+id/spiral_item_2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                app:spiralChecked="false"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+                android:background="@drawable/selector_1"
+                app:spiralChecked="false">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/ic_test_20"
+                    android:tag="@string/tag_imageview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:tag="@string/tag_textview"
+                    android:text="Item2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+            </com.ethanco.spiralgroup.SpiralRelativeLayout>
 
             <com.ethanco.spiralgroup.SpiralRelativeLayout
                 android:id="@+id/spiral_item_3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                app:spiralChecked="false"></com.ethanco.spiralgroup.SpiralRelativeLayout>
+                android:background="@drawable/selector_1"
+                app:spiralChecked="false">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/ic_test_20"
+                    android:tag="@string/tag_imageview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:tag="@string/tag_textview"
+                    android:text="Item3"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+            </com.ethanco.spiralgroup.SpiralRelativeLayout>
 
         </com.ethanco.spiralgroup.SpiralGroup>
     </RelativeLayout>
