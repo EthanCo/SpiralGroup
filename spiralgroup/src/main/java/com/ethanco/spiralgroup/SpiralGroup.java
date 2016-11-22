@@ -49,9 +49,10 @@ public class SpiralGroup extends LinearLayout {
      */
     public void setAllSpiralItemOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
         int childCount = getChildCount();
+        String tagNotAdd = getContext().getString(R.string.tag_not_add);
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
-            if (child instanceof ISpiralItem) {
+            if (child instanceof ISpiralItem && !tagNotAdd.equals(child.getTag())) { //child的tag为R.string.tag_not_add的不添加
                 ISpiralItem spiralChild = (ISpiralItem) child;
                 spiralChild.addOnCheckedChangeListener(onCheckedChangeListener);
             }

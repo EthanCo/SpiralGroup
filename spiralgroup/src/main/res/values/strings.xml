@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SpiralGroup</string>
+
+    <string name="tag_not_add">tag_spiral_child_not_add</string>
 </resources>
