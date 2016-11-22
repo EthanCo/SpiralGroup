@@ -31,6 +31,7 @@ public class SpiralGroup extends LinearLayout {
             String tagNotAdd = getContext().getString(R.string.tag_not_add);
             View spiralChildView = ((View) spiralItem);
             if (tagNotAdd.equals(spiralChildView.getTag())) {
+                spiralItem.setChecked(!spiralItem.isChecked());
                 return; //如果是tag为R.string.tag_not_add的child执行点击事件，不执行
             }
         }
