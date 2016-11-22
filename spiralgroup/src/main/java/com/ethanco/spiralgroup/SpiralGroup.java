@@ -27,6 +27,14 @@ public class SpiralGroup extends LinearLayout {
 
     //安排Child
     public void scheduleChild(ISpiralItem spiralItem) {
+        if (spiralItem instanceof View) {
+            String tagNotAdd = getContext().getString(R.string.tag_not_add);
+            View spiralChildView = ((View) spiralItem);
+            if (tagNotAdd.equals(spiralChildView.getTag())) {
+                return; //如果是tag为R.string.tag_not_add的child执行点击事件，不执行
+            }
+        }
+
         final boolean currClick = spiralItem.isChecked();
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
