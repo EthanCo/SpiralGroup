@@ -68,6 +68,8 @@ SpiralRelativeLayout (继承自RelativeLayout)
 
 	layoutSpiralGroup.setAllSpiralItemOnCheckedChangeListener(this);  
 
+> 对于个别不想添加的child，可在child中添加 ```android:tag="@string/tag_not_add"``` 排除添加该Listener
+
 ### 实现监听  
 
 	 @Override
