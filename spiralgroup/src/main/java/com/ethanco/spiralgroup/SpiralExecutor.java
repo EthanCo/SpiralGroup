@@ -72,7 +72,6 @@ public class SpiralExecutor implements ISpiralItem {
 
     public void onClick(View view) {
         if (mParent == null) return;
-        if (isChecked) return;
 
         mParent.scheduleChild(mChild);
     }
