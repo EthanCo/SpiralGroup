@@ -35,7 +35,7 @@ public class SpiralGroup extends LinearLayout {
         }
 
         final boolean currClick = spiralItem.isChecked();
-        if (currClick) return;
+        if (currClick) return; //如果已处于点击状态，不执行
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
