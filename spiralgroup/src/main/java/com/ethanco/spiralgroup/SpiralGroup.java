@@ -29,7 +29,7 @@ public class SpiralGroup extends LinearLayout {
     public void scheduleChild(ISpiralItem spiralItem) {
         if (spiralItem instanceof View) {
             if (isNotAdd((View) spiralItem)) {
-                spiralItem.setChecked(false);
+                spiralItem.setChecked(true);
                 return;
             }
         }
@@ -71,7 +71,7 @@ public class SpiralGroup extends LinearLayout {
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
-            if (child instanceof ISpiralItem) { // && !isNotAdd(child)  child的tag为R.string.tag_not_add的不添加
+            if (child instanceof ISpiralItem && !isNotAdd(child)) { //child的tag为R.string.tag_not_add的不添加
                 ISpiralItem spiralChild = (ISpiralItem) child;
                 spiralChild.addOnCheckedChangeListener(onCheckedChangeListener);
             }
