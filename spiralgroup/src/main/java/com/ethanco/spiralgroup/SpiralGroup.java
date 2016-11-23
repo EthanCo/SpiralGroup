@@ -40,7 +40,7 @@ public class SpiralGroup extends LinearLayout {
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
             if (isNotAdd(child)) {
-                return;
+                continue;
             }
 
             if (child instanceof ISpiralItem) {
