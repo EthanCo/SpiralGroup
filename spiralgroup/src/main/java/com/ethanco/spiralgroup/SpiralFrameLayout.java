@@ -65,6 +65,12 @@ public class SpiralFrameLayout extends FrameLayout implements ISpiralItem, View.
     }
 
     @Override
+    public boolean performClick() {
+        executor.onClick(this);
+        return true;
+    }
+
+    @Override
     public void addOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
         executor.addOnCheckedChangeListener(onCheckedChangeListener);
     }

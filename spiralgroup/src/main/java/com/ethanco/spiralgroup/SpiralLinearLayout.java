@@ -65,6 +65,12 @@ public class SpiralLinearLayout extends LinearLayout implements ISpiralItem, Vie
     }
 
     @Override
+    public boolean performClick() {
+        executor.onClick(this);
+        return true;
+    }
+
+    @Override
     public void addOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
         executor.addOnCheckedChangeListener(onCheckedChangeListener);
     }

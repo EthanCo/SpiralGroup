@@ -7,6 +7,6 @@ import android.widget.Checkable;
  * Created by EthanCo on 2016/11/11.
  */
 
-public interface ISpiralItem extends Checkable{
+public interface ISpiralItem extends Checkable {
     void addOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener);
 }

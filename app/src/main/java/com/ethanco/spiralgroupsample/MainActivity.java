@@ -11,9 +11,10 @@ import android.widget.TextView;
 
 import com.ethanco.spiralgroup.abs.ISpiralItem;
 import com.ethanco.spiralgroup.abs.OnCheckedChangeListener;
+import com.ethanco.spiralgroup.abs.OnInitFinishListener;
 import com.ethanco.spiralgroupsample.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements OnCheckedChangeListener, OnInitFinishListener {
 
     private ActivityMainBinding binding;
 
@@ -24,9 +25,20 @@ public class MainActivity extends AppCompatActivity implements OnCheckedChangeLi
 
         //当所有的spiralGroup的ISpiral子类添加同一个addOnCheckedChangeListener接口时，可使用setAllSpiralItemOnCheckedChangeListener快速设置
         binding.layoutSpiralGroup.setAllSpiralItemOnCheckedChangeListener(this);
+        binding.layoutSpiralGroup.setOnInitFinishListener(this);
         /*binding.spiralItem1.addOnCheckedChangeListener(this);
         binding.spiralItem2.addOnCheckedChangeListener(this);
         binding.spiralItem3.addOnCheckedChangeListener(this);*/
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override
@@ -55,5 +67,11 @@ public class MainActivity extends AppCompatActivity implements OnCheckedChangeLi
                 textView.setTextColor(getResources().getColor(textColor));
             }
         }
+    }
+
+    @Override
+    public void onSpiralInitFinish() {
+        //初始化完成，可在此处进行自定义的切换
+        binding.spiralItem2.onClick(binding.spiralItem2);
     }
 }

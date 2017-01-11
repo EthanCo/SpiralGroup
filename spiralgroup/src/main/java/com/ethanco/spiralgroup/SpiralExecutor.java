@@ -29,7 +29,7 @@ public class SpiralExecutor implements ISpiralItem {
         return mChild;
     }
 
-    public void setViewAndParent(View view){
+    public void setViewAndParent(View view) {
         if (view instanceof ISpiralItem) {
             mChild = (ISpiralItem) view;
         } else {

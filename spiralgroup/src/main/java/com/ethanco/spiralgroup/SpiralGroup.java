@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import com.ethanco.spiralgroup.abs.ISpiralItem;
 import com.ethanco.spiralgroup.abs.OnCheckedChangeListener;
+import com.ethanco.spiralgroup.abs.OnInitFinishListener;
 
 /**
  * Created by EthanCo on 2016/11/11.
@@ -55,6 +56,20 @@ public class SpiralGroup extends LinearLayout {
         }
     }
 
+    private boolean isFirst = true;
+    private OnInitFinishListener onInitFinishListener;
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        if (isFirst) {
+            isFirst = false;
+            if (onInitFinishListener != null) {
+                onInitFinishListener.onSpiralInitFinish();
+            }
+        }
+    }
+
     //如果是tag为R.string.tag_not_add的child 返回true，否则返回false
     private boolean isNotAdd(View spiralItem) {
         String tagNotAdd = getContext().getString(R.string.tag_not_add);
@@ -76,5 +91,9 @@ public class SpiralGroup extends LinearLayout {
                 spiralChild.addOnCheckedChangeListener(onCheckedChangeListener);
             }
         }
+    }
+
+    public void setOnInitFinishListener(OnInitFinishListener onInitFinishListener) {
+        this.onInitFinishListener = onInitFinishListener;
     }
 }
